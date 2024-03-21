@@ -1,6 +1,7 @@
 function scrollLocation(){
     let sec = document.querySelectorAll('section');
     let links = document.querySelectorAll('.sidenav nav ul li a');
+    let ulLink = document.querySelectorAll('.sidenav nav ul');
 
     window.onscroll = () => {
         sec.forEach(section => {
@@ -8,7 +9,6 @@ function scrollLocation(){
             let offset = section.offsetTop - 250;
             let height = section.offsetHeight;
             let id = section.getAttribute('id');
-            let parentId = id.substring(9, id.indexOf("-"));
             
 
             if(top >= offset && top < offset + height){
@@ -17,11 +17,10 @@ function scrollLocation(){
                     let currentLink = document.querySelector('.sidenav nav ul li a[href*=' + id + ']');
                     currentLink.classList.add('active');
                     
-                    // Check if the link's parent has a class of "sub-level"                   
-                    // if(currentLink.startsWith("subLevel")){
-                    //     let parentLink = document.querySelector('.sidenav nav ul li a[href*=' + parentId + ']');
-                    //     parentLink.classList.add('active');
-                    // }             
+                    //if subsection is in view also hightligt the parentsection
+                    let parentId = id.split('-')[0];
+                    let parentLink = document.querySelector('.sidenav nav ul li a[href*=' + parentId + ']');
+                    parentLink.classList.add('active');    
                 });
             }
         });

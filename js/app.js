@@ -19,7 +19,7 @@ function scrollLocation(){
                     //if subsection is in view also hightlight the parentsection
                     let parentId = id.split('-')[0];
                     let parentLink = document.querySelector('.sidenav nav ul li a[href*=' + parentId + ']');
-                    parentLink.classList.add('active');    
+                    parentLink.classList.add('active');
                 });
             }
         });
@@ -53,7 +53,7 @@ function addMargin(className, marginType) {
     const boxElements = document.querySelectorAll('[class^="box"]');
     
     boxElements.forEach(function(boxElement) {
-        const mediaElement = boxElement.querySelector(className + ' img, ' + className + ' video, ' + className + ' iframe, ' + className + ' object, ' + className + ' embed');
+        const mediaElement = boxElement.querySelector(className + ' img, ' + className + ' video, ' + className + ' iframe, ' + className + ' object, ' + className + ' embed, ' + className + " .small-sidebox");
 
         if (mediaElement) {
             const mediaHeight = mediaElement.offsetHeight;

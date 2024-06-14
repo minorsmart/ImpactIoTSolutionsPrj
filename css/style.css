@@ -152,7 +152,12 @@ h6 {
     margin: 5px;
     flex-direction: column;
     text-align: center;
+    color: black;
     text-shadow: 0 10px 4px rgba(0, 0, 0, 0.25);  
+}
+
+blockquote {
+    background-color: #EAC59D;
 }
 
 p {
@@ -160,7 +165,7 @@ p {
     color: black;
     font-size: small;
     font-weight: 500;
-    background: #EAC59D;
+    background: inherit;
 }
 
 img {
@@ -175,7 +180,10 @@ img {
 
 .box-rightimg img, 
 .box-rightimg video,
-.box-rightimg iframe {
+.box-rightimg iframe,
+.box-rightimg object,
+.box-rightimg embed,
+.box-rightimg .small-info-box {
     position: absolute;
     right: 0;
     transform: translateX(85%) translateY(-20%);
@@ -183,7 +191,10 @@ img {
 
 .box-upperimg img,
 .box-upperimg video,
-.box-upperimg iframe {
+.box-upperimg iframe,
+.box-upperimg object,
+.box-upperimg embed,
+.box-upperimg .small-info-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +209,10 @@ img {
 
 .box-leftimg img,
 .box-leftimg video,
-.box-leftimg iframe {
+.box-leftimg iframe,
+.box-leftimg object,
+.box-leftimg embed,
+.box-leftimg .small-info-box {
     position: absolute;
     left: 0;
     transform: translateX(-85%) translateY(-20%);
@@ -208,7 +222,8 @@ img {
 .box-lowerimg video,
 .box-lowerimg iframe,
 .box-lowerimg object,
-.box-lowerimg embed {
+.box-lowerimg embed,
+.box-lowerimg .small-info-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,6 +235,31 @@ img {
     transform: translateY(99%) translate(-50%);
     bottom: 5%;
     left: 50%;
+}
+
+table {
+    justify-self: left;
+    background: inherit;
+}
+
+th,
+td {
+    color: black;
+    font-size: small;
+    font-weight: 500;
+    background:#EAC59D;
+    padding: 0 5px 0 5px;
+    border-right: 1px solid #283042;
+}
+
+td:last-of-type,
+th:last-of-type {
+    border-right: none;
+}
+
+th {
+    font-style: italic;
+    border-bottom: 1px solid #283042;
 }
 
 .highlighted {
@@ -357,7 +397,7 @@ section section {
     color: #283042;
 }
 
-section section h3{
+section section h3 {
     top: 0;
     left: 0;
     width: 100%;

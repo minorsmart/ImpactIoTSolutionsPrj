@@ -60,6 +60,7 @@ header {
 .row-content {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 .column-content {
@@ -129,12 +130,14 @@ section h1 {
 }
 
 .box-rightimg h6,
-.box-rightimg p {
+.box-rightimg p,
+.box-rightimg table {
     padding-right: 50px
 }
 
 .box-leftimg h6,
-.box-leftimg p {
+.box-leftimg p,
+.box-leftimg table{
     padding-left: 50px;
 }
 
@@ -144,6 +147,22 @@ section h1 {
 
 .box-lowerimg p {
     padding-bottom: 10px;
+}
+
+.first-page {
+    margin-top: 50px;
+    font-size: larger;
+    font-weight: bolder;
+    color: #EAC59D;
+    text-shadow: 0 10px 4px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    text-align: center;  
+}
+
+#handtekening {
+    font-size:xx-large;
+    color: #A1717E;
+    text-align: left;
 }
 
 h6 {
@@ -178,12 +197,36 @@ img {
     margin: 0 !important;
 }
 
+.small-sidebox {
+    border-radius: 25px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    z-index: 1;
+    background: #bb7e8f;
+    position: absolute;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.small-sidebox a{
+    font-size: small;
+    color: black;
+    background-color: inherit;
+    padding: 5px;
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 40px;
+}
+
 .box-rightimg img, 
 .box-rightimg video,
 .box-rightimg iframe,
 .box-rightimg object,
 .box-rightimg embed,
-.box-rightimg .small-info-box {
+.box-rightimg .small-sidebox {
     position: absolute;
     right: 0;
     transform: translateX(85%) translateY(-20%);
@@ -194,7 +237,7 @@ img {
 .box-upperimg iframe,
 .box-upperimg object,
 .box-upperimg embed,
-.box-upperimg .small-info-box {
+.box-upperimg .small-sidebox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,7 +255,7 @@ img {
 .box-leftimg iframe,
 .box-leftimg object,
 .box-leftimg embed,
-.box-leftimg .small-info-box {
+.box-leftimg .small-sidebox {
     position: absolute;
     left: 0;
     transform: translateX(-85%) translateY(-20%);
@@ -223,7 +266,7 @@ img {
 .box-lowerimg iframe,
 .box-lowerimg object,
 .box-lowerimg embed,
-.box-lowerimg .small-info-box {
+.box-lowerimg .small-sidebox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,7 +281,6 @@ img {
 }
 
 table {
-    justify-self: left;
     background: inherit;
 }
 

@@ -377,6 +377,27 @@
                                 width="600px" height="352px" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                                 loading="lazy"></iframe>
+                            <h6>NASA Astronomy Picture of the Day</h6>
+                            <h6 class="apod">
+                                <h6 id="title"></h6>
+                                <img id="image" src="" alt="Astronomy Picture of the Day">
+                            </h6>
+
+                            <script>
+                                const apiKey = 'HmsYrfrpyMrkQrQUEjON7iJFusz24vP9r72Xw6BK';
+                                const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+
+                                fetch(apiUrl)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        document.getElementById('title').textContent = data.title;
+                                        document.getElementById('image').src = data.url;
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching the NASA APOD data:', error);
+                                        document.getElementById('title').textContent = 'Error fetching data';
+                                    });
+                            </script>
                         </div>
                     </div>
                 </div>

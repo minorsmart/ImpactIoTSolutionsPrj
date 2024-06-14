@@ -53,7 +53,7 @@ function addMargin(className, marginType) {
     const boxElements = document.querySelectorAll('[class^="box"]');
     
     boxElements.forEach(function(boxElement) {
-        const mediaElement = boxElement.querySelector(className + ' img, ' + className + ' video, ' + className + ' iframe');
+        const mediaElement = boxElement.querySelector(className + ' img, ' + className + ' video, ' + className + ' iframe, ' + className + ' object, ' + className + ' embed');
 
         if (mediaElement) {
             const mediaHeight = mediaElement.offsetHeight;

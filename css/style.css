@@ -149,6 +149,22 @@ section h1 {
     padding-bottom: 10px;
 }
 
+.first-page {
+    margin-top: 50px;
+    font-size: larger;
+    font-weight: bolder;
+    color: #EAC59D;
+    text-shadow: 0 10px 4px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    text-align: center;  
+}
+
+#handtekening {
+    font-size:xx-large;
+    color: #A1717E;
+    text-align: left;
+}
+
 h6 {
     display: flex;
     background: #EAC59D;

@@ -550,49 +550,13 @@
                                 </p>
                             </blockquote>
                         </div>
-                        <div class="box-rightimg">
+                        <div class="box-api">
                             <div class="small-sidebox" style="width: 150px; height: 150px;">
                                 <div id="weather" style="width: inherit; height: inherit;">
                                     <p id="description"><p>
-                                    <p id="temp" style="font-size: large; font-weight: bold;"><p>
+                                    <p id="temp" style="font-size: xx-large; font-weight: bold;"><p>
                                     <p id="location"><p>
                                 </div>
-                                <script lang="text/javascript">
-                                    // future javascript
-                                    function weatherBalloon( cityID ) {
-                                      var key = '8a3c97ba81c6e34c4bf42b8e2af9e682';
-                                      fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
-                                      .then(function(resp) { return resp.json() }) // Convert data to json
-                                      .then(function(data) {
-                                        console.log(data);
-                                        drawWeather(data);
-                                      })
-                                      .catch(function() {
-                                        // catch any errors
-                                      });
-                                    }
-                                
-                                    window.onload = function() {
-                                      weatherBalloon( 1835847 ); //ID of Seoul
-                                    }
-                                    function drawWeather( d ) {
-                                      var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-                                      var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
-                                      var description = d.weather[0].description;
-                                      
-                                      document.getElementById('description').innerHTML = description;
-                                      document.getElementById('temp').innerHTML = celcius + '&deg;';
-                                      document.getElementById('location').innerHTML = d.name;
-                                      
-                                      if( description.indexOf('rain') > 0 ) {
-                                        document.body.className = 'rainy';
-                                      } else if( description.indexOf('cloud') > 0 ) {
-                                        document.body.className = 'cloudy';
-                                      } else if( description.indexOf('sunny') > 0 ) {
-                                        document.body.className = 'sunny';
-                                      }
-                                    }
-                                  </script>
                             </div>
                             <h6>API's</h6>
                             <blockquote>
@@ -601,41 +565,9 @@
                                 </p>
                             </blockquote>
                             <div id="NASA-api" style="width: 150px; height: 150px;">
-                                <h6 id="title"><h6>
-                                <section id="media-section"></section>
+                                <h6 id="nasa-title"><h6>
+                                <section id="nasa-media-section"></section>
                             </div>
-                            <script>
-                                const apiKey = 'CYtsN6hBGQfsrYbKekU2JPUHcQkGYhUxBtz4VCcx';
-                                const today = new Date().toISOString().slice(0, 10);
-                                const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${today}';
-
-                                fetch(apiUrl)
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        document.getElementById('title').textContent = data.title;
-                                        if (data.media_type === 'image') {
-                                            const img = document.createElement('img');
-                                            img.src = data.url;
-                                            img.alt = data.title;
-                                            img.style.width = '100%';
-                                            img.style.height = '100%';
-                                            document.getElementById('media-section').appendChild(img);
-                                        } else if (data.media_type === 'video') {
-                                            const iframe = document.createElement('iframe');
-                                            iframe.src = data.url;
-                                            iframe.frameborder = '0';
-                                            iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
-                                            iframe.allowFullscreen = true;
-                                            iframe.style.width = '100%';
-                                            iframe.style.height = '100%';
-                                            document.getElementById('media-section').appendChild(iframe);
-                                        }
-                                    })
-                                    .catch(error => {
-                                        console.error('Error fetching the NASA img data:', error);
-                                        document.getElementById('title').textContent = 'Error fetching data';
-                                    });
-                            </script>
                         </div>
                         <div class="box-onlytext">
                             <h6>AI</h6>
@@ -653,6 +585,8 @@
             </section>
         </section>
     </div>
+    <script src="js/api/NenaR/weather.js"></script>
+    <script src="js/api/NenaR/nasa.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -53,21 +53,22 @@ function addMargin(className, marginType) {
     const boxElements = document.querySelectorAll('[class^="box"]');
     
     boxElements.forEach(function(boxElement) {
-        const mediaElement = boxElement.querySelector(className + ' img, ' + className + ' video, ' + className + ' iframe, ' + className + ' object, ' + className + ' embed, ' + className + " .small-sidebox");
+        const mediaElement = boxElement.querySelector(className + ' img, ' + className + ' video, ' + className + ' iframe, ' + className + ' object, ' + className + ' embed, ' + className + " .small-sidebox, " + className + " #NASA-api");
 
         if (mediaElement) {
             const mediaHeight = mediaElement.offsetHeight;
+            const mediaWidth = mediaElement.offsetWidth;
 
             switch (marginType) {
                 case 'top':
                     boxElement.style.marginTop = mediaHeight + "px";
                     break;
                 case 'right':
-                    boxElement.style.marginRight = mediaHeight + "px";
+                    boxElement.style.marginRight = mediaWidth + "px";
                     boxElement.style.minHeight = mediaHeight + "px";
                     break;
                 case 'left':
-                    boxElement.style.marginLeft = mediaHeight + "px";
+                    boxElement.style.marginLeft = mediaWidth + "px";
                     boxElement.style.minHeight = mediaHeight + "px";
                     break;
                 case 'bottom':
@@ -77,7 +78,7 @@ function addMargin(className, marginType) {
                     break;
             }
 
-            if (className === '.box-rightimg' || className === '.box-leftimg') {
+            if (className === '.box-rightimg' || className === '.box-leftimg' || className === ".box-api") {
                 imgMargin = 0.2 * mediaHeight;
                 boxElement.style.marginTop = imgMargin + "px";
             }
@@ -88,6 +89,8 @@ addMargin('.box-upperimg', 'top');
 addMargin('.box-rightimg', 'right');
 addMargin('.box-leftimg', 'left');
 addMargin('.box-lowerimg', 'bottom');
+addMargin('.box-api', 'right');
+addMargin('.box-api', 'left');
 
 function adjustedContentWindow() {
     var pageTitle = document.title;

@@ -147,7 +147,8 @@ section h1 {
     padding-top: 10px;
 }
 
-.box-lowerimg p {
+.box-lowerimg p,
+.box-lowerimg a {
     padding-bottom: 10px;
 }
 
@@ -186,6 +187,14 @@ p {
     color: black;
     font-size: small;
     font-weight: 500;
+    background: inherit;
+}
+
+a {
+    display: flex;
+    color: #bb7e8f;
+    font-size: small;
+    font-weight: bold;
     background: inherit;
 }
 

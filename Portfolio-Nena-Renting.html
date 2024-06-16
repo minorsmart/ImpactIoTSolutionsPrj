@@ -354,22 +354,6 @@
                 <div class="content">
                     <div class="column-content">
                         <div class="box-lowerimg">
-                            <!-- <div clas="slideshow">
-                                <div class="slides fade">
-                                    <div class="number-text">1/2</div>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/deOTK-zWRTg?si=x00aUx6HmoI2inYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <div class="slides">
-                                    <div class="number-text">2/2</div>
-                                    <img src="images/NenaR/Smart story.jpg" width="560" height="315">
-                                </div>
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                            </div>
-                            <div style="text-align: center;">
-                                <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                            </div> -->
                             <img src="images/NenaR/Smart story.jpg" width="600" height="400">
                             <h6>Kick-off</h6>
                             <blockquote>
@@ -481,7 +465,11 @@
                 <h3>Smart technology</h3>
                 <div class="content">
                     <div class="column-content">
-                        <div class="box-onlytext">
+                        <div class="box-lowerimg">
+                            <video width="960px" height="540px" controls muted>
+                                <source src="videos/NenaR/Minion_Plantsysteem.mp4" type="video/mp4">
+                                Your browser does not support the video tag
+                            </video>
                             <h6>Programmeren</h6>
                             <p class="schuin-gedrukt middle-text">
                             Smart Plantsysteem
@@ -489,8 +477,9 @@
                             <blockquote>
                                 <p>
                                     <br>
-                                Tijdens de smart technology lessen was de opdracht om een IoT schakeling te ontwikkelen om een plant te managen. Dit werd gedaan d.m.v. meerdere sensoren en actuatoren. Nadat de lessen voorbij waren, had ik naast de voorgeschreven sensoren en actuatoren besloten om een extra actuator toe te voegen aan de IoT schakeling. Deze actuator is een “Servo”. Met behulp van een servo gaat de plantbak draaien, zodat de plant geleidelijk water kan krijgen. Alle data die verzameld worden, worden naar een InfluxDB database gestuurd waarin de data worden opgeslagen en gevisualiseerd kunnen worden. In eerste instantie was het plan om deze data te visualiseren in een dashboard op een display. Echter door tijdsgebrek is dit mij helaas niet gelukt. Wel heb ik ervoor kunnen zorgen dat de servo werkt in samenhang met de pomp en werkt de IoT schakeling, zoals ingesteld.
+                                Tijdens de smart technology lessen was de opdracht om een IoT schakeling te ontwikkelen om een plant te managen. Dit werd gedaan d.m.v. meerdere sensoren en actuatoren. Nadat de lessen voorbij waren, had ik naast de voorgeschreven sensoren en actuatoren besloten om een extra actuator toe te voegen aan de IoT schakeling. Deze actuator is een “Servo”. Met behulp van een servo gaat de plantbak draaien, zodat de plant geleidelijk water kan krijgen. Alle data die verzameld worden, worden naar een InfluxDB database gestuurd waarin de data worden opgeslagen en gevisualiseerd kunnen worden. In eerste instantie was het plan om deze data te visualiseren in een dashboard op een display. Echter door tijdsgebrek is dit mij helaas niet gelukt. Wel heb ik ervoor kunnen zorgen dat de servo werkt in samenhang met de pomp en werkt de IoT schakeling, zoals ingesteld. Om te kunnen zien hoe mijn code is gesturcuteerd en opgezet, zie mijn git repository.
                                 </p>
+                                <a href="https://github.com/NenRen03/Plantsystem">Minion Plantsysteem</a>
                             </blockquote>
                         </div>
                         <div class="box-leftimg">
